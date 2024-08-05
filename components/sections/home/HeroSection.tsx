@@ -74,7 +74,7 @@ const HeroSection = () => {
           <span className="flex items-center gap-2">
             {" "}
             <LucideAtom className="text-blue text-4xl" />
-            AI-Powered Voice Assistant 24/7 at your Service
+            AI-Powered Voice Assistants 24/7 at your Service
           </span>
           <h1>
             Your{" "}
