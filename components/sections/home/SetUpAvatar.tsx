@@ -73,7 +73,7 @@ const SetUpAvatar = () => {
               icon={<TbWorld />}
               heading="50+ Language Support"
               tagline="Our Avatar team is equipped to assist you in over 50 languages, ensuring seamless communication no matter where you're from."
-              classname="border-r-2"
+              classname="md:border-r-2"
             />
           </div>
           <div className="flex items-center">
@@ -81,7 +81,7 @@ const SetUpAvatar = () => {
               icon={<FaRegStar />}
               heading="Low Cost Service"
               tagline="AI can handle numerous customer interactions simultaneously without additional costs and reducing the need for a large customer support team."
-              classname="border-r-2"
+              classname="md:border-r-2"
             />
           </div>
           <IconHeadingContent

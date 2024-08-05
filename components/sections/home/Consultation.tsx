@@ -3,7 +3,7 @@ import React from "react";
 
 const ConsultationSection = () => {
   return (
-    <section className="blue-gradient block-space lg:relative lg:bottom-[-50px] container rounded-lg text-white">
+    <section className="blue-gradient block-space lg:relative lg:bottom-[-50px] container md:rounded-lg text-white">
       <div className="big-container text-center space-y-4">
         <h2>
           Book your Free Consultation <br /> Call Today!
