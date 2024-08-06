@@ -28,7 +28,7 @@ const SecondaryHeroSection = () => {
       t1.fromTo(".box", { opacity: 0 }, { opacity: 1, duration: 0.5 });
 
       t1.fromTo(
-        ".tech-row",
+        ".tech-item",
         { opacity: 0 },
         { opacity: 1, duration: 0.5, stagger: 0.3, ease: "power1.inOut" }
       );
@@ -112,12 +112,16 @@ export default SecondaryHeroSection;
 
 function TextBox({ heading }: { heading: string }) {
   return (
-    <div className="p-4 rounded-full  border border-white">
+    <div className="p-4 rounded-full tech-item  border border-white">
       <h5>{heading}</h5>
     </div>
   );
 }
 
 function BlankBox({ classname }: { classname?: string }) {
-  return <div className={cn("bg-[#1E1C2D] p-4 rounded-full", classname)}></div>;
+  return (
+    <div
+      className={cn("bg-[#1E1C2D] p-4 tech-item rounded-full", classname)}
+    ></div>
+  );
 }
