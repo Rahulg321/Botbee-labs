@@ -66,6 +66,7 @@ const SecondaryHeroSection = () => {
     <section className="block-space-large bg-mainDark text-white overflow-hidden">
       <div className="container" ref={container}>
         <div className="text-center box mb-6 md:mb-8 lg:mb-16 space-y-4">
+          <span className="cursor-blink md:text-lg">What is the problem?</span>
           <h2>
             Regular Customer Support Service <br /> can be Frustrating
           </h2>
