@@ -32,8 +32,7 @@ const SetUpAvatar = () => {
             <video
               src="/CreationVideo.mp4"
               controls
-              className="w-full"
-              poster="/path/to/your/poster-image.png"
+              className="w-full rounded-lg"
               loop
               muted
               autoPlay
