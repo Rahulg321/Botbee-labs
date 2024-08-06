@@ -148,3 +148,26 @@ h6 {
 .text-blue {
   color: #5d5fef;
 }
+
+/* styles/globals.css or a specific component's CSS module */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cursor-blink::after {
+  content: "";
+  display: inline-block;
+  margin-left: 2px;
+  background-color: currentColor;
+  width: 10px; /* Increase this value to make the cursor wider */
+  height: 1em;
+  animation: blink 1s step-start 0s infinite;
+}

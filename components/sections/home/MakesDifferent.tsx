@@ -121,6 +121,7 @@ const MakesDifferent = () => {
   return (
     <section className="block-space container overflow-hidden" ref={container}>
       <div className="text-center mb-6 md:mb-8 lg:mb-12 space-y-4">
+        <span className="cursor-blink md:text-lg">How can you solve it?</span>
         <h2>
           What makes us <span className="text-blue">Different</span> from an{" "}
           <br /> Ordinary Customer Support?{" "}
