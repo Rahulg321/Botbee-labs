@@ -9,6 +9,7 @@ import AvatarHeroGroup from "@/public/AvatarHeroGroup.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import HeroGraphics from "@/public/Hero-Graphics.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,7 +111,7 @@ const HeroSection = () => {
         </div>
         <div>
           <Image
-            src={Placeholder}
+            src={HeroGraphics}
             alt="hero image of botbee illustrating use cases for the product itself"
             className="animate-image"
           />
