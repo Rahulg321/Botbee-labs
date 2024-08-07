@@ -66,7 +66,10 @@ const HeroSection = () => {
   // };
 
   return (
-    <section className="block-space-large bg-mainDark overflow-hidden text-white">
+    <section
+      className="block-space-large bg-mainDark overflow-hidden text-white"
+      id="home"
+    >
       <div
         className="container grid grid-cols-1 lg:grid-cols-2 gap-8"
         ref={container}
@@ -96,17 +99,6 @@ const HeroSection = () => {
             >
               Build your Avatar
             </Button>
-            <Button
-              className="rounded-full font-semibold border-white border-2"
-              size={"lg"}
-            >
-              Learn More
-            </Button>
-          </div>
-          <div className="flex gap-4 mt-4 items-center">
-            <h4>50+</h4>
-            <h4>Happy Customers</h4>
-            <Image src={AvatarHeroGroup} alt="" />
           </div>
         </div>
         <div>

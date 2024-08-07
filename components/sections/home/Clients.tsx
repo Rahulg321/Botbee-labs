@@ -52,6 +52,7 @@ const ClientsSection = () => {
   return (
     <section
       className="block-space-large big-container overflow-hidden"
+      id="clients"
       ref={container}
     >
       <h2 className="animate-heading text-center mb-4 md:mb-6 lg:mb-8">

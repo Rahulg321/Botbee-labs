@@ -15,12 +15,11 @@ type HeaderProps = {
 };
 
 const navLinks = [
-  { link: "/pricing", label: "Pricing" },
-  { link: "/features", label: "Features" },
-  { link: "/benefits", label: "Benefits" },
-  { link: "/testimonials", label: "Testimonials" },
-  { link: "/how-to-use", label: "How To Use" },
-  { link: "/demo", label: "Demo" },
+  { link: "#home", label: "Pricing" },
+  { link: "#make-different", label: "Features" },
+  { link: "#benefits", label: "Benefits" },
+  { link: "#clients", label: "Testimonials" },
+  { link: "#set-up-avatar", label: "How To Use" },
 ];
 
 const Header = ({ classname }: HeaderProps) => {
@@ -147,9 +146,12 @@ function AuthDialogNavs() {
 }
 
 function ProfileMenu() {
-  return (
-    <Button className="rounded-lg hidden md:block" variant={"secondary"}>
-      Signout
-    </Button>
-  );
+  return <div></div>;
 }
+// function ProfileMenu() {
+//   return (
+//     <Button className="rounded-lg hidden md:block" variant={"secondary"}>
+//       Signout
+//     </Button>
+//   );
+// }

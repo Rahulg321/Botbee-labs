@@ -48,6 +48,7 @@ const BenefitSection = () => {
   return (
     <section
       className="block-space-large overflow-hidden big-container grid grid-cols-1 md:grid-cols-2 gap-4"
+      id="benefits"
       ref={container}
     >
       <div className="animate-image">
