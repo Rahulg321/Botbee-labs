@@ -26,7 +26,10 @@ const ExistingPlatforms = () => {
         </Button>
       </div>
       <div>
-        <Image src={BlurImage} alt="" />
+        <Image
+          src={BlurImage}
+          alt="blured image showing a circle of different logos of tools"
+        />
       </div>
     </section>
   );

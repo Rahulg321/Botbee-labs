@@ -9,7 +9,10 @@ const WorldMapSection = () => {
         Why Personalized Customer Engagement <br /> is a{" "}
         <span className="text-blue">High Priority</span> in 2024
       </h2>
-      <Image src={Map} alt="" />
+      <Image
+        src={Map}
+        alt="image depiciting the world map in the form of dots"
+      />
       <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 mt-4">
         <GridItem
           heading="$27 billion"

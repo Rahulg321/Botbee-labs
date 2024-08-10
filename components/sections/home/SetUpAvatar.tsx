@@ -41,6 +41,10 @@ const SetUpAvatar = () => {
               autoPlay
             >
               Your browser does not support the video tag.
+              <p>
+                Video demonstrating how to set up your avatar and enjoy
+                exclusive features.
+              </p>
             </video>
           </div>
         </div>

@@ -101,7 +101,7 @@ function NameLogo({}: {}) {
       <Link href="/" aria-label="Home page" className="">
         <Image
           src={WhiteLogo}
-          alt="hyranode Logo"
+          alt="botbee logo"
           height={300}
           width={200}
           className="object-cover"

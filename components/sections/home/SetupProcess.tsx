@@ -123,6 +123,8 @@ const SetupProcess = () => {
             backgroundImage={One}
             imageLeft={false}
             classname="box-1 box-odd box"
+            imageAlt="image depicting a grid showing flags of different countries"
+            backgroundImageAlt="background image of the number ONE"
           />
 
           <GridItem
@@ -130,6 +132,8 @@ const SetupProcess = () => {
             image={MeetTeam}
             backgroundImage={Two}
             classname="box-2 box-even box"
+            imageAlt="animated image showing a group of different people"
+            backgroundImageAlt="background image of the number TWO"
           />
 
           <GridItem
@@ -138,12 +142,16 @@ const SetupProcess = () => {
             backgroundImage={Three}
             imageLeft={false}
             classname="box-3 box-odd box"
+            imageAlt="image showing a circle of logos for different tools like Github, PDF, etc."
+            backgroundImageAlt="background image of the number THREE"
           />
           <GridItem
             heading="Test your avatar and copy the link to upload in your website"
             image={ChatGirl}
             backgroundImage={Four}
             classname="box-4 box-even box"
+            imageAlt="animated image showing a women asking a question to a chatbot"
+            backgroundImageAlt="background image of the number FOUR"
           />
         </div>
       </div>
@@ -156,11 +164,15 @@ export default SetupProcess;
 function GridItem({
   heading,
   image,
+  imageAlt,
+  backgroundImageAlt,
   backgroundImage,
   imageLeft = true,
   classname,
 }: {
   heading: string;
+  imageAlt: string;
+  backgroundImageAlt: string;
   image: any;
   backgroundImage: any;
   imageLeft?: boolean;
@@ -177,14 +189,18 @@ function GridItem({
       )}
     >
       <div className="flex-1 p-4">
-        <Image src={image} alt="" />
+        <Image src={image} alt={imageAlt} />
       </div>
       <div className="relative overflow-hidden flex-1">
         <div className="z-10 absolute content-center inset-0 lg:px-12">
           <h2>{heading}</h2>
         </div>
         <div className="">
-          <Image src={backgroundImage} alt="" className="mx-auto" />
+          <Image
+            src={backgroundImage}
+            alt={backgroundImageAlt}
+            className="mx-auto"
+          />
         </div>
       </div>
     </div>

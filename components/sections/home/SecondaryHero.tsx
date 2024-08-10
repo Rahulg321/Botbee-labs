@@ -78,27 +78,27 @@ const SecondaryHeroSection = () => {
         </div>
 
         <div className="space-y-4">
-          <div className="tech-row flex">
+          <div className="tech-row flex flex-col md:flex-row">
             <TextBox heading="How to handle massive Customer Support?" />
             <BlankBox classname="flex-1" />
             <TextBox heading="How can I elevate User Experience?" />
           </div>
-          <div className="tech-row flex">
+          <div className="tech-row flex flex-col md:flex-row">
             <BlankBox classname="flex-1" />
             <TextBox heading="How can I save service cost?" />
             <BlankBox classname="flex-1" />
           </div>
-          <div className="tech-row flex">
+          <div className="tech-row flex flex-col md:flex-row">
             <TextBox heading="How to save my valuable time from hiring process?" />
             <BlankBox classname="flex-1" />
             <TextBox heading="How can I attract more customers?" />
           </div>
-          <div className="tech-row flex">
+          <div className="tech-row flex flex-col md:flex-row">
             <BlankBox classname="flex-1" />
             <TextBox heading="How can I increase engagement on my website?" />
             <BlankBox classname="flex-1" />
           </div>
-          <div className="tech-row flex">
+          <div className="tech-row flex flex-col md:flex-row">
             <TextBox heading="How to serve quick results?" />
             <BlankBox classname="flex-1" />
             <TextBox heading="How can I automate the communication?" />
@@ -122,7 +122,10 @@ function TextBox({ heading }: { heading: string }) {
 function BlankBox({ classname }: { classname?: string }) {
   return (
     <div
-      className={cn("bg-[#1E1C2D] p-4 tech-item rounded-full", classname)}
+      className={cn(
+        "bg-[#1E1C2D] hidden md:block p-4 tech-item rounded-full",
+        classname
+      )}
     ></div>
   );
 }

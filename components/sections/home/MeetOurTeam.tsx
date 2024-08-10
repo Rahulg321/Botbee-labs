@@ -21,7 +21,10 @@ const MeetOurTeam = () => {
             Build your Avatar
           </Button>
         </div>
-        <Image src={TeamPortrait} alt="" />
+        <Image
+          src={TeamPortrait}
+          alt="animated image showing a group of different people"
+        />
       </div>
     </section>
   );

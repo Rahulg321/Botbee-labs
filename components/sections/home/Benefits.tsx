@@ -52,7 +52,10 @@ const BenefitSection = () => {
       ref={container}
     >
       <div className="animate-image">
-        <Image src={BenefitsLeft} alt="" />
+        <Image
+          src={BenefitsLeft}
+          alt="image depiciting the analytics and benefits of using the product in a dashboard manner"
+        />
       </div>
       <div className=" animate-content space-y-4 md:space-y-6 lg:space-y-8">
         <h2>

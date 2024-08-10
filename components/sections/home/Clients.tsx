@@ -60,7 +60,10 @@ const ClientsSection = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="animate-image">
-          <Image src={ClientGirl} alt="" />
+          <Image
+            src={ClientGirl}
+            alt="image depicting a women with her arms crossed"
+          />
         </div>
         <div className=" animate-content content-center space-y-4">
           <div className="text-4xl text-[#5D5FEF]">
