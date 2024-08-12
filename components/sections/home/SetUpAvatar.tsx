@@ -33,7 +33,7 @@ const SetUpAvatar = () => {
           </div>
           <div className="col-span-2 animate-content">
             <video
-              src="/CreationVideo.mp4"
+              src="/videos/finalCreation.mp4"
               controls
               className="w-full rounded-lg"
               loop
