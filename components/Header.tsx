@@ -11,11 +11,10 @@ import { Button } from "./ui/button";
 import { MdClose, MdMenu } from "react-icons/md";
 
 const navLinks = [
-  { link: "#home", label: "Pricing" },
-  { link: "#make-different", label: "Features" },
-  { link: "#benefits", label: "Benefits" },
-  { link: "#clients", label: "Testimonials" },
-  { link: "#set-up-avatar", label: "How To Use" },
+  { link: "/", label: "Home" },
+  { link: "/pricing", label: "Pricing" },
+  { link: "/product", label: "Product" },
+  { link: "/about", label: "About" },
 ];
 
 const Header = () => {
@@ -23,19 +22,16 @@ const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
 
-  const handleNavLinkClick = (link: string) => {
-    const section = document.querySelector(link);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    } else {
-      router.push(link);
-    }
-  };
+  console.log("pathname", pathname);
 
   return (
     <>
-      <header className={cn("w-full px-2 py-2 md:px-4 bg-mainDark lg:px-12")}>
+      <header
+        className={cn(
+          "w-full px-2 py-2 md:px-4 bg-mainDark lg:px-12",
+          pathname === "/about" ? "bg-white" : ""
+        )}
+      >
         <nav aria-label="Main-navigation">
           <ul className="flex flex-col md:m-4 md:flex-row md:items-center md:justify-between md:rounded-xl">
             <div className="flex items-center justify-between">
@@ -68,21 +64,13 @@ const Header = () => {
               </button>
               {navLinks.map((item, index) => {
                 return (
-                  <a
-                    key={index}
-                    onClick={() => handleNavLinkClick(item.link)}
-                    className={cn(
-                      "",
-                      pathname === item.link ? "underline" : ""
-                    )}
-                    style={{ cursor: "pointer" }}
-                  >
+                  <Link href={item.link} key={index}>
                     {item.label}
-                  </a>
+                  </Link>
                 );
               })}
             </div>
-            <DesktopMenu handlefunc={handleNavLinkClick} />
+            <DesktopMenu />
             <ProfileMenu />
           </ul>
         </nav>
@@ -111,26 +99,14 @@ function NameLogo({}: {}) {
   );
 }
 
-function DesktopMenu({ handlefunc }: { handlefunc: (link: string) => void }) {
-  const pathname = usePathname();
-
+function DesktopMenu({}: {}) {
   return (
     <div className="hidden gap-8 md:flex md:items-center">
       {navLinks.map((item, index) => {
         return (
-          <a
-            key={index}
-            onClick={() => handlefunc(item.link)}
-            className={cn(
-              "text-customMuted font-bold transition hover:underline hover:decoration-4 hover:underline-offset-8",
-              pathname === item.link
-                ? "underline decoration-4 underline-offset-8"
-                : ""
-            )}
-            style={{ cursor: "pointer" }}
-          >
+          <Link href={item.link} key={index} className="text-customMuted">
             {item.label}
-          </a>
+          </Link>
         );
       })}
     </div>
@@ -138,5 +114,9 @@ function DesktopMenu({ handlefunc }: { handlefunc: (link: string) => void }) {
 }
 
 function ProfileMenu() {
-  return <div></div>;
+  return (
+    <div>
+      <Button variant={"secondary"}>Sign In</Button>
+    </div>
+  );
 }

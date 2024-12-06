@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { cn } from "@/lib/utils";
-import { manrope, poppins } from "./fonts";
+import { manrope, poppins } from "../fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ProductSidebar from "@/components/sidebars/product-sidebar";
+import ProductSecondarySidebar from "@/components/sidebars/product-secondary-sidebar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -32,11 +34,12 @@ export default function RootLayout({
           manrope.variable
         )}
       >
-        <main className="parent-container">
-          <Header />
-          {children}
-          <Footer />
-        </main>
+        <div className="flex-1 items-start  md:grid md:grid-cols-[220px_220px_minmax(0,1fr)] lg:grid-cols-[240px_240px_minmax(0,1fr)] ">
+          <ProductSidebar />
+          {/* Only show CreateBotSidebar on create-new-bot routes */}
+          <ProductSecondarySidebar />
+          <main className="">{children}</main>
+        </div>
       </body>
     </html>
   );
